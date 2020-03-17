@@ -10,12 +10,22 @@ public class MainDictionary {
 
         TranslateWord translate = new TranslateWord();
 
+        editFileDictionary add_New_Word = new editFileDictionary();
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter word: ");
         String new_Word = scanner.nextLine();
 
-        readFile.readFileFromDictionary("F:\\CodeGym\\Module2\\Case Study\\Translate\\src\\index.txt");
-        translate.translateToVietNamese(new_Word);
+//        readFile.readFileFromDictionary("F:\\CodeGym\\Module2\\Case Study\\Translate\\src\\index.txt");
+//        translate.translateToVietNamese(new_Word);
+//
+//        System.out.println("Enter word to add : ");
+//        String Word = scanner.nextLine();
+//        add_New_Word.writeToFile("F:\\CodeGym\\Module2\\Case Study\\Translate\\src\\index.txt", Word);
+        System.out.println("Enter keyWord to remove: ");
+        String word = scanner.nextLine();
+        add_New_Word.removeElement("F:\\CodeGym\\Module2\\Case Study\\Translate\\src\\index.txt",word);
+
 
     }
 }

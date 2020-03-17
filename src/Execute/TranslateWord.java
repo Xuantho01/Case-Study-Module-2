@@ -1,14 +1,14 @@
 package Execute;
 
-public class TranslateWord implements Itranslate {
+public class TranslateWord extends ReadFileDictionary implements Itranslate {
 
     public TranslateWord() {
     }
 
     @Override
     public void translateToVietNamese(String New_Word) {
-        if (ReadFileDictionary.listWord.containsKey(New_Word)){
-            System.out.println("Meaning of word: " + ReadFileDictionary.listWord.get(New_Word));
+        if (listWord.containsKey(New_Word)){
+            System.out.println("Meaning of word: " + listWord.get(New_Word));
         }else
             System.out.println("Not found meaning of word!");
 //        for (Map.Entry<String,String> entry: listWord.entrySet()){

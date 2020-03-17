@@ -9,7 +9,7 @@ public class ReadFileDictionary implements IreadFile {
 
     public ReadFileDictionary() {}
 
-    static Map<String, String> listWord = new HashMap<>();
+    public Map<String, String> listWord = new HashMap<>();
 
     @Override
     public void readFileFromDictionary(String pathOfFile) {
