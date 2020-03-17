@@ -1,21 +1,21 @@
-import Translate.ReadFileDictionary;
+import Execute.ReadFileDictionary;
+import Execute.TranslateWord;
 
 import java.util.Scanner;
 
 public class MainDictionary {
     public static void main(String[] args) {
 
-//            ReadFileDictionary readFile = new ReadFileDictionary();
+        ReadFileDictionary readFile = new ReadFileDictionary();
 
-//        Translate.TranslateWord translateWord = new Translate.TranslateWord();
+        TranslateWord translate = new TranslateWord();
 
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter word: ");
-            String newWord = scanner.nextLine();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter word: ");
+        String new_Word = scanner.nextLine();
 
-            ReadFileDictionary.readFile("F:\\CodeGym\\Module2\\Case Study\\Translate\\src\\index.txt");
-//        translateWord.translate(newWord);
-//        Translate.ReadFileDictionary.translate(newWord);
+        readFile.readFileFromDictionary("F:\\CodeGym\\Module2\\Case Study\\Translate\\src\\index.txt");
+        translate.translateToVietNamese(new_Word);
 
     }
 }
