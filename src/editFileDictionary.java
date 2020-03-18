@@ -1,17 +1,21 @@
 import Execute.IEditFileDictionary;
+import Execute.Isort;
 import Execute.ReadFileDictionary;
+import Execute.WriteFile;
 
+import javax.swing.text.html.parser.Entity;
 import java.io.*;
-import java.sql.Struct;
-import java.util.Map;
+import java.util.*;
 
-public class editFileDictionary extends ReadFileDictionary implements IEditFileDictionary {
+public class editFileDictionary extends ReadFileDictionary implements IEditFileDictionary, Isort {
+
+    WriteFile writeFile = new WriteFile();
 
     public editFileDictionary() {
     }
 
     @Override
-    public void writeToFile(String path, String wordToWrite) {
+    public void addNew_Word(String path, String wordToWrite) {
         try {
 
             FileWriter myWrite = new FileWriter(path, true);
@@ -32,120 +36,48 @@ public class editFileDictionary extends ReadFileDictionary implements IEditFileD
     public void removeElement(String path, String WordToRemove) throws IOException {
 
         readFileFromDictionary(path);
+
         System.out.println(listWord);
 
         listWord.remove(WordToRemove);
 
+        writeFile.writeToFile(path);
+
         System.out.println(listWord);
 
-        File file = new File(path);
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
 
-        for (Map.Entry<String, String> entry : listWord.entrySet()) {
-
-            bufferedWriter.write(String.valueOf(entry));
-           // bufferedWriter.write(entry.getKey() , );
-            bufferedWriter.newLine();
-
-        }
-
-        bufferedWriter.flush();
-        bufferedWriter.close();
     }
 
-    public void edit(String path, String key, String value, String keyToChange) throws IOException {
+    public void edit(String path, String key, String value) {
 
+        try {
+
+            readFileFromDictionary(path);
+
+            System.out.println(listWord);
+
+            listWord.replace(key, value);
+
+            System.out.println(listWord);
+
+            writeFile.writeToFile(path);
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    @Override
+    public void sortKey(String path) throws IOException {
         readFileFromDictionary(path);
 
-        System.out.println(listWord);
-
-        if (listWord.get(key).equals(keyToChange)){
-            listWord.replace(keyToChange,value);
-        }
-
-        System.out.println(listWord);
+        TreeMap<String, String> sorted = new TreeMap<>(listWord);
+        Set<Map.Entry<String, String>> entries = sorted.entrySet();
+        System.out.println(entries);
 
         File file = new File(path);
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
 
-        for (Map.Entry<String, String> entry : listWord.entrySet()) {
+        WriteFile.bufferWrite(file,entries);
 
-            bufferedWriter.write(String.valueOf(entry));
-            // bufferedWriter.write(entry.getKey() , );
-            bufferedWriter.newLine();
-
-        }
-
-        bufferedWriter.flush();
-        bufferedWriter.close();
     }
-
-
 }
-
-
-//    @Override
-//    public void removeElement(String path1, String WordToRemove) {
-//
-//        String path2 = "F:\\CodeGym\\Module2\\Case Study\\Translate\\src\\tmpFile.txt";
-//
-//        File file = new File(path1);
-//        File tempFile = new File(path2);
-//
-//        String cutTo = ":";
-//        try {
-//            if (!file.exists()) {
-//                throw new FileNotFoundException();
-//            }
-//
-//            String line = "";
-//            BufferedReader input = new BufferedReader(new FileReader(file));
-//            BufferedWriter out = new BufferedWriter(new FileWriter(tempFile));
-//
-//            while ((line = input.readLine()) != null) {
-//                String[] list = line.split(cutTo);
-//                if (list[0].equals(WordToRemove))
-//                    continue;
-//                out.write(list[0] + ": " + list[1] + "\n");
-//            }
-//
-//            input.close();
-//            out.close();
-//            updateFile(path1,path2);
-//            System.out.println("remove successfully!");
-//
-//        } catch (Exception e) {
-//            System.out.println("Can't remove word!");
-//        }
-//
-//    }
-//
-//    public void updateFile(String path1, String path2) {
-//
-//        File file = new File(path1);
-//        File tempFile = new File(path2);
-//        String cutTo = ":";
-//
-//        try {
-//            if (!file.exists()){
-//                throw new FileNotFoundException();
-//            }
-//
-//            String line = "";
-//            BufferedReader input = new BufferedReader(new FileReader(tempFile));
-//            BufferedWriter out = new BufferedWriter(new FileWriter(file));
-//
-//            while ((line = input.readLine()) != null){
-//                String[] list = line.split(cutTo);
-//                out.write(list[0]+": "+list[1]+"\n");
-//            }
-//
-//            input.close();
-//            out.close();
-//            System.out.println("update successfully!");
-//
-//        }catch (Exception e){
-//            System.out.println("Can't remove word!");
-//        }
-//    }
-

@@ -29,5 +29,6 @@ public class ReadFileDictionary implements IreadFile {
         }catch (Exception e){
             System.out.println(e);
         }
+
     }
 }

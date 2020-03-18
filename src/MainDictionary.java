@@ -29,13 +29,13 @@ public class MainDictionary {
 //        String word = scanner.nextLine();
 //        add_New_Word.removeElement("F:\\CodeGym\\Module2\\Case Study\\Translate\\src\\index.txt", word);
 //
-        System.out.println("Enter keyWord to edit key: ");
-        String wordKey = scanner.nextLine();
-
-        System.out.println("Enter keyWord to edit Value: ");
-        String wordValue = scanner.nextLine();
-        add_New_Word.edit(path, wordKey, wordValue);
-
+//        System.out.println("Enter keyWord to edit key: ");
+//        String wordKey = scanner.nextLine();
+//
+//        System.out.println("Enter keyWord to edit Value: ");
+//        String wordValue = scanner.nextLine();
+//        add_New_Word.edit(path, wordKey, wordValue);
+          add_New_Word.sortKey(path);
 
     }
 }

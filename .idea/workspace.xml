@@ -3,18 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="eef87183-5841-4f61-90f9-a41e507ac7ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Translate/Execute/Itranslate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/Execute/Itranslate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Translate/Execute/IEditFileDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/Execute/IEditFileDictionary.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Translate/Execute/ReadFileDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/Execute/ReadFileDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Translate/Execute/TranslateWord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/Execute/TranslateWord.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Translate/MainDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/MainDictionary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Translate/editFileDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/editFileDictionary.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Translate/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Translate/tmpFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/tmpFile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Execute/IEditFileDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/IEditFileDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Execute/Itranslate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/Itranslate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Execute/ReadFileDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/ReadFileDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Execute/TranslateWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/TranslateWord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainDictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/editFileDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/editFileDictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tmpFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/tmpFile.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.capture" />
   </component>
@@ -88,7 +89,7 @@
       <workItem from="1584371366469" duration="7199000" />
       <workItem from="1584411320427" duration="14030000" />
       <workItem from="1584455146092" duration="10215000" />
-      <workItem from="1584495690144" duration="8161000" />
+      <workItem from="1584495690144" duration="14599000" />
     </task>
     <servers />
   </component>
@@ -111,10 +112,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="137" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1584453125688" />
-    <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1584496643204">
+    <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1584517077282">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1584496643204" />
+    <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1584517077282" />
     <state x="332" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584460065656">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -123,30 +124,30 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="119" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.738@0.0.1366.738" timestamp="1584413730379" />
-    <state x="92" y="92" width="1182" height="554" key="DiffContextDialog" timestamp="1584496472662">
+    <state x="92" y="92" width="1130" height="554" key="DiffContextDialog" timestamp="1584518086571">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="92" y="92" width="1182" height="554" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1584496472662" />
+    <state x="92" y="92" width="1130" height="554" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1584518086571" />
     <state x="463" y="127" key="FileChooserDialogImpl" timestamp="1584458876454">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="127" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1584458876454" />
-    <state width="1323" height="315" key="GridCell.Tab.0.bottom" timestamp="1584503630639">
+    <state width="1323" height="81" key="GridCell.Tab.0.bottom" timestamp="1584520109635">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="315" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1584503630639" />
-    <state width="1323" height="315" key="GridCell.Tab.0.center" timestamp="1584503630635">
+    <state width="1323" height="81" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1584520109635" />
+    <state width="1323" height="81" key="GridCell.Tab.0.center" timestamp="1584520109635">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="315" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1584503630635" />
-    <state width="1323" height="315" key="GridCell.Tab.0.left" timestamp="1584503630635">
+    <state width="1323" height="81" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1584520109635" />
+    <state width="1323" height="81" key="GridCell.Tab.0.left" timestamp="1584520109635">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="315" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1584503630635" />
-    <state width="1323" height="315" key="GridCell.Tab.0.right" timestamp="1584503630639">
+    <state width="1323" height="81" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1584520109635" />
+    <state width="1323" height="81" key="GridCell.Tab.0.right" timestamp="1584520109635">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="315" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1584503630639" />
+    <state width="1323" height="81" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1584520109635" />
     <state width="1323" height="92" key="GridCell.Tab.1.bottom" timestamp="1584502226033">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -167,16 +168,13 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="186" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1584454537857" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/editFileDictionary.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="466" y="252" key="extract.method.dialog" timestamp="1584516658430">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="466" y="252" key="extract.method.dialog/0.0.1366.738@0.0.1366.738" timestamp="1584516658430" />
+    <state x="391" y="3" key="refactoring.ChangeSignatureDialog" timestamp="1584518006124">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="391" y="3" key="refactoring.ChangeSignatureDialog/0.0.1366.738@0.0.1366.738" timestamp="1584518006124" />
   </component>
 </project>
