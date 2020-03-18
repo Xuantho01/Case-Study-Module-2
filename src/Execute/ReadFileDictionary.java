@@ -1,18 +1,20 @@
 package Execute;
-
-import Execute.IreadFile;
+import client.editFileDictionary;
 
 import java.io.*;
 import java.util.*;
 
-public class ReadFileDictionary implements IreadFile {
+
+public class ReadFileDictionary  implements IreadFile {
+
+//    editFileDictionary EDIT_FILE = new editFileDictionary();
 
     public ReadFileDictionary() {}
 
     public Map<String, String> listWord = new HashMap<>();
 
     @Override
-    public void readFileFromDictionary(String pathOfFile) {
+    public void readFileFromDictionary(String pathOfFile) throws IOException {
         File file = new File(pathOfFile);
         String cutTo = "=";
         try {
@@ -29,6 +31,6 @@ public class ReadFileDictionary implements IreadFile {
         }catch (Exception e){
             System.out.println(e);
         }
-
+//       EDIT_FILE.sortKey();
     }
 }

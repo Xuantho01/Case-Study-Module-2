@@ -1,9 +1,10 @@
+package client;
+
 import Execute.IEditFileDictionary;
 import Execute.Isort;
 import Execute.ReadFileDictionary;
 import Execute.WriteFile;
 
-import javax.swing.text.html.parser.Entity;
 import java.io.*;
 import java.util.*;
 
@@ -11,8 +12,8 @@ public class editFileDictionary extends ReadFileDictionary implements IEditFileD
 
     WriteFile writeFile = new WriteFile();
 
-    public editFileDictionary() {
-    }
+//    public editFileDictionary() {
+//    }
 
     @Override
     public void addNew_Word(String path, String wordToWrite) {
@@ -29,7 +30,6 @@ public class editFileDictionary extends ReadFileDictionary implements IEditFileD
             System.out.println("An error occurred");
             e.printStackTrace();
         }
-
     }
 
     @Override
@@ -69,14 +69,15 @@ public class editFileDictionary extends ReadFileDictionary implements IEditFileD
 
     @Override
     public void sortKey(String path) throws IOException {
+
         readFileFromDictionary(path);
 
         TreeMap<String, String> sorted = new TreeMap<>(listWord);
         Set<Map.Entry<String, String>> entries = sorted.entrySet();
+
         System.out.println(entries);
 
         File file = new File(path);
-
         WriteFile.bufferWrite(file,entries);
 
     }

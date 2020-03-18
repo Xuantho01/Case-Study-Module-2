@@ -1,12 +1,14 @@
 package Execute;
 
+import java.io.IOException;
+
 public class TranslateWord extends ReadFileDictionary implements Itranslate {
 
     public TranslateWord() {
     }
 
     @Override
-    public void translateToVietNamese(String path, String New_Word) {
+    public void translateToVietNamese(String path, String New_Word) throws IOException {
         readFileFromDictionary(path);
         if (listWord.containsKey(New_Word)){
             System.out.println("Meaning of word: " + listWord.get(New_Word));

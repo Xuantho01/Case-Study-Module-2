@@ -3,18 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="eef87183-5841-4f61-90f9-a41e507ac7ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Translate/Execute/IEditFileDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/Execute/IEditFileDictionary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Translate/Execute/IreadFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/Execute/IreadFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Translate/Execute/Itranslate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/Execute/Itranslate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Translate/Execute/ReadFileDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/Execute/ReadFileDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Translate/MainDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/MainDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Translate/editFileDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/editFileDictionary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Translate/Execute/TranslateWord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/Execute/TranslateWord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Translate/MainDictionary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Translate/editFileDictionary.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Translate/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Translate/tmpFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/tmpFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Execute/IEditFileDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/IEditFileDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Execute/IreadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/IreadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Execute/Isort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/Isort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Execute/Itranslate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/Itranslate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Execute/ReadFileDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/ReadFileDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/editFileDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/editFileDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Execute/TranslateWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/TranslateWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/MainDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/editFileDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/editFileDictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tmpFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/tmpFile.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
   </component>
   <component name="RunManager" selected="Application.MainDictionary">
     <configuration name="MainDictionary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainDictionary" />
+      <option name="MAIN_CLASS_NAME" value="client.MainDictionary" />
       <module name="Translate" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,7 +92,7 @@
       <workItem from="1584371366469" duration="7199000" />
       <workItem from="1584411320427" duration="14030000" />
       <workItem from="1584455146092" duration="10215000" />
-      <workItem from="1584495690144" duration="14599000" />
+      <workItem from="1584495690144" duration="18582000" />
     </task>
     <servers />
   </component>
@@ -132,22 +135,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="127" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1584458876454" />
-    <state width="1323" height="81" key="GridCell.Tab.0.bottom" timestamp="1584520109635">
+    <state width="1323" height="201" key="GridCell.Tab.0.bottom" timestamp="1584524159129">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="81" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1584520109635" />
-    <state width="1323" height="81" key="GridCell.Tab.0.center" timestamp="1584520109635">
+    <state width="1323" height="201" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1584524159129" />
+    <state width="1323" height="201" key="GridCell.Tab.0.center" timestamp="1584524159129">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="81" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1584520109635" />
-    <state width="1323" height="81" key="GridCell.Tab.0.left" timestamp="1584520109635">
+    <state width="1323" height="201" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1584524159129" />
+    <state width="1323" height="201" key="GridCell.Tab.0.left" timestamp="1584524159129">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="81" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1584520109635" />
-    <state width="1323" height="81" key="GridCell.Tab.0.right" timestamp="1584520109635">
+    <state width="1323" height="201" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1584524159129" />
+    <state width="1323" height="201" key="GridCell.Tab.0.right" timestamp="1584524159129">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="81" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1584520109635" />
+    <state width="1323" height="201" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1584524159129" />
     <state width="1323" height="92" key="GridCell.Tab.1.bottom" timestamp="1584502226033">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -168,6 +171,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="186" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1584454537857" />
+    <state x="494" y="288" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584523158073">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="494" y="288" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1584523158073" />
     <state x="466" y="252" key="extract.method.dialog" timestamp="1584516658430">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
