@@ -7,6 +7,7 @@ import Execute.WriteFile;
 
 import java.io.*;
 import java.util.*;
+import java.util.function.BiFunction;
 
 public class editFileDictionary extends ReadFileDictionary implements IEditFileDictionary, Isort {
 
@@ -22,7 +23,7 @@ public class editFileDictionary extends ReadFileDictionary implements IEditFileD
             FileWriter myWrite = new FileWriter(path, true);
             BufferedWriter out = new BufferedWriter(myWrite);
 
-            out.write("\n" + wordToWrite);
+            out.write(wordToWrite);
             System.out.println("Successfully wrote to the file!");
             out.close();
 
@@ -68,7 +69,9 @@ public class editFileDictionary extends ReadFileDictionary implements IEditFileD
     }
 
     @Override
-    public void sortKey(String path) throws IOException {
+    public void save_File(String path) throws IOException {
+
+        File file = new File(path);
 
         readFileFromDictionary(path);
 
@@ -77,8 +80,7 @@ public class editFileDictionary extends ReadFileDictionary implements IEditFileD
 
         System.out.println(entries);
 
-        File file = new File(path);
-        WriteFile.bufferWrite(file,entries);
+        WriteFile.bufferWrite(file, entries);
 
     }
 }

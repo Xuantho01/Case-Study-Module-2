@@ -1,6 +1,10 @@
+BBBBBB= SDFSDF	
 a= sgdgdf
 bbb= sdfg
 blue=  xanh
+c= dfadsf
+cccc= fsadfasdf
+dd= sdfsdf
+gray= xam
 pink=  hong
 red= do
-gray= xam

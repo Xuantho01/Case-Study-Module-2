@@ -1,4 +1,5 @@
 package Execute;
+
 import client.editFileDictionary;
 
 import java.io.*;
@@ -31,6 +32,5 @@ public class ReadFileDictionary  implements IreadFile {
         }catch (Exception e){
             System.out.println(e);
         }
-//       EDIT_FILE.sortKey();
     }
 }

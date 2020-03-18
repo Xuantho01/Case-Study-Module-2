@@ -34,14 +34,28 @@ public class MainDictionary {
 //        String wordValue = scanner.nextLine();
 //        add_New_Word.edit(path, wordKey, wordValue);
 
-        add_New_Word.sortKey(path);
+        add_New_Word.save_File(path);
 
         System.out.println("Enter word to add : ");
         String Word = scanner.nextLine();
 
         add_New_Word.addNew_Word(path, Word);
+        int choice;
 
-//        add_New_Word.addNew_Word(path, Word);
+        do {
+
+            System.out.println("Enter your choice");
+            choice = scanner.nextInt();
+            switch (choice) {
+                case 1:
+                    add_New_Word.save_File(path);
+                    break;
+                case 0:
+                    System.out.println("finish!");
+                    break;
+            }
+        } while (choice != 0);
+        add_New_Word.save_File(path);
 
     }
 }
