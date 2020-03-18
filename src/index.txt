@@ -1,2 +1,4 @@
-blue:   xanh
-pink:   hong
+red=fnjdnfksndakf
+pink=  hong
+gray= xam
+blue=  xanh

@@ -14,7 +14,7 @@ public class ReadFileDictionary implements IreadFile {
     @Override
     public void readFileFromDictionary(String pathOfFile) {
         File file = new File(pathOfFile);
-        String cutTo = ":";
+        String cutTo = "=";
         try {
             if (!file.exists()){
                 throw new FileNotFoundException();
