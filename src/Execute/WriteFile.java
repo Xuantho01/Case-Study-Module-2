@@ -7,16 +7,18 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
 
-public class WriteFile extends ReadFileDictionary {
+public class WriteFile extends ReadFileDictionary{
 
-    public void writeToFile(String path) throws IOException {
+    public void writeToFile(String PathOfFile, Map<String, String> list) throws IOException {
 
-        File file = new File(path);
 
-        bufferWrite(file, listWord.entrySet());
+        File file = new File(PathOfFile);
+
+        bufferWrite(file, list.entrySet());
     }
 
     public static void bufferWrite(File file, Set<Map.Entry<String, String>> entries) throws IOException {
+
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
 
         for (Map.Entry<String, String> entry : entries) {
