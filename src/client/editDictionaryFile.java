@@ -38,16 +38,22 @@ public class editDictionaryFile extends ReadFileDictionary implements IEditFileD
     }
 
     @Override
-    public void removeElement(String PathOfFile) throws IOException {
+    public void removeElement(String PathOfFile) {
+        try {
 
-        readFromDictionaryFile(PathOfFile);
+            readFromDictionaryFile(PathOfFile);
 
-        System.out.println("Enter word to remove");
-        String WordToRemove = scanner.nextLine();
+            System.out.println("Enter word to remove");
+            String WordToRemove = scanner.nextLine();
 
-        this.wordList.remove(WordToRemove);
+            this.wordList.remove(WordToRemove);
 
-        WRITE_FILE.writeToFile(PathOfFile,this.wordList);
+            WRITE_FILE.writeToFile(PathOfFile,this.wordList);
+            System.out.println("Successfully removed!");
+
+        }catch (Exception e){
+            System.out.println("An error!");
+        }
 
     }
 
@@ -72,17 +78,22 @@ public class editDictionaryFile extends ReadFileDictionary implements IEditFileD
     }
 
     @Override
-    public void save_File(String PathOfFile) throws IOException {
+    public void save_File(String PathOfFile) {
 
-        File file = new File(PathOfFile);
+        try {
+            File file = new File(PathOfFile);
 
-        readFromDictionaryFile(PathOfFile);
+            readFromDictionaryFile(PathOfFile);
 
-        TreeMap<String, String> sortFile = new TreeMap<>(wordList);
+            TreeMap<String, String> sortFile = new TreeMap<>(wordList);
 
-        Set<Map.Entry<String, String>> entries = sortFile.entrySet();
+            Set<Map.Entry<String, String>> entries = sortFile.entrySet();
 
-        WriteFile.bufferWrite(file, entries);
+            WriteFile.bufferWrite(file, entries);
+
+        }catch (Exception e){
+            System.out.println(e);
+        }
 
     }
 }

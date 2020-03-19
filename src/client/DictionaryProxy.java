@@ -1,62 +1,126 @@
 package client;
 
-import java.io.IOException;
-import java.util.Scanner;
+import Execute.IReadAccount;
+import Execute.Proxy;
 
-public class DictionaryProxy extends editDictionaryFile {
+import java.io.*;
+import java.util.*;
+
+public class DictionaryProxy extends editDictionaryFile implements Proxy, IReadAccount {
 
     editDictionaryFile EDIT_MANAGEMENT = new editDictionaryFile();
+
     static Scanner scanner = new Scanner(System.in);
 
-    private static String YourAccount;
-    private static String YourPassWord;
+    private String YourAccount;
+    private String YourPassWord;
 
     private String note = "PassWord or Account incorrect. Please try again!";
 
-    public static void requiredLogin(){
-
+    public void requiredLogin() {
         System.out.println("Enter your account: ");
-         YourAccount = scanner.nextLine();
+        YourAccount = scanner.nextLine();
 
         System.out.println("Enter passWord: ");
-         YourPassWord = scanner.nextLine();
+        YourPassWord = scanner.nextLine();
 
     }
 
-    public static Boolean isLoggedIn(){
+        public Boolean isLoggedIn() {
 
         requiredLogin();
-
-        String account = "admin";
-        String password = "admin";
-
-        boolean isCorrectLogin = YourAccount.equals(account) && YourPassWord.equals(password);
-        if (isCorrectLogin){
-            return true;
+        String pathOfFileAccount = "F:\\CodeGym\\Module2\\Case Study\\Translate\\src\\account.txt";
+        readAccount(pathOfFileAccount);
+        for (int i = 0; i < WORD_LIST_ACCOUNT.size(); i++) {
+            if (WORD_LIST_ACCOUNT.get(i).equals(YourAccount) && WORD_LIST_ACCOUNT.get(i).equals(YourPassWord)){
+                return true;
+            }
         }
         return false;
     }
+//    public Boolean isLoggedIn() {
+//
+//        requiredLogin();
+//        String pathOfFileAccount = "F:\\CodeGym\\Module2\\Case Study\\Translate\\src\\account.txt";
+//        readAccount(pathOfFileAccount);
+//        boolean isCorrectLogin = this.WORD_LIST_ACCOUNT.containsKey(YourAccount)
+//                && this.WORD_LIST_ACCOUNT.containsValue(YourPassWord);
+//        if (isCorrectLogin) {
+//            return true;
+//        }
+//        return false;
+//    }
 
-    public void editManagement(String PathOfFile){
+    @Override
+    public void editManagement(String PathOfFile) {
 
-        if (isLoggedIn()){
+        if (isLoggedIn()) {
             EDIT_MANAGEMENT.editElement(PathOfFile);
-        }else
+        } else
             System.out.println(note);
     }
 
-    public void removeManagement(String PathOfFile) throws IOException {
-        if (isLoggedIn()){
+    @Override
+    public void removeManagement(String PathOfFile) {
+        if (isLoggedIn()) {
             EDIT_MANAGEMENT.removeElement(PathOfFile);
-        }else
+        } else
             System.out.println(note);
     }
 
+    @Override
     public void addWordManagement(String PathOfFile) {
-        if (isLoggedIn()){
+        if (isLoggedIn()) {
             EDIT_MANAGEMENT.addNew_Word(PathOfFile);
-        }else
+        } else
             System.out.println(note);
     }
 
+    List<String> WORD_LIST_ACCOUNT = new ArrayList<>();
+    @Override
+    public void readAccount(String pathOfFileAccount) {
+
+        File file = new File(pathOfFileAccount);
+        String cutToCharInFile = "=";
+
+        try {
+            if (!file.exists()){
+                throw new FileNotFoundException();
+            }
+            String line = "";
+            BufferedReader input = new BufferedReader(new FileReader(file));
+            while ((line = input.readLine()) != null){
+                String[] Word_List = line.split(cutToCharInFile);
+                WORD_LIST_ACCOUNT.add(Word_List[0]);
+                WORD_LIST_ACCOUNT.add(Word_List[1]);
+            }
+            input.close();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+    }
+
+//    Map<String, String> WORD_LIST_ACCOUNT = new HashMap<>();
+//
+//    @Override
+//    public void readAccount(String pathOfFileAccount) {
+//
+//        File file = new File(pathOfFileAccount);
+//        String cutToCharInFile = "=";
+//
+//        try {
+//            if (!file.exists()) {
+//                throw new FileNotFoundException();
+//            }
+//            String line = "";
+//            BufferedReader input = new BufferedReader(new FileReader(file));
+//            while ((line = input.readLine()) != null) {
+//                String[] Word_List = line.split(cutToCharInFile);
+//                WORD_LIST_ACCOUNT.put(Word_List[0], Word_List[1]);
+//            }
+//            input.close();
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+//    }
 }

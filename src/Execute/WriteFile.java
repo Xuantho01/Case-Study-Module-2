@@ -11,7 +11,6 @@ public class WriteFile extends ReadFileDictionary{
 
     public void writeToFile(String PathOfFile, Map<String, String> list) throws IOException {
 
-
         File file = new File(PathOfFile);
 
         bufferWrite(file, list.entrySet());
@@ -29,5 +28,4 @@ public class WriteFile extends ReadFileDictionary{
         bufferedWriter.flush();
         bufferedWriter.close();
     }
-
 }

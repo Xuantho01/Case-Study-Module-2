@@ -31,9 +31,5 @@ public class TranslateWord extends ReadFileDictionary implements ITranslate {
                 System.out.println(entry.getKey() + " : " + entry.getValue());
             }
         }
-//        if (listWord.containsKey(New_Word)){
-//            System.out.println("Meaning of word: " + listWord.get(New_Word));
-//        }else
-//            System.out.println("Not found meaning of word!");
     }
 }

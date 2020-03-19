@@ -1,3 +1,0 @@
-red= do
-blue= xanh
-pink= hong

@@ -1,4 +1,13 @@
-pink=hhhhhhhhhhhh
-gray= xam
+0doan= chim to
 blue=kkkkkkkkkkkkk
+eat= ăn
+gray= xam
+hao hao= mi tom
+hello= xin chao
+hello1= xi chào
+iphone= tao
+pink=hhhhhhhhhhhh
+red= do
+sorry= xin lỗi
+speak= noi
 yellow= vang

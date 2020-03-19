@@ -10,7 +10,6 @@ public class MainDictionary {
 
     public static void main(String[] args) throws IOException {
 
-
         String PathOfFile = "F:\\CodeGym\\Module2\\Case Study\\Translate\\src\\index.txt";
 
         TranslateWord TRANSLATE = new TranslateWord();
@@ -19,11 +18,16 @@ public class MainDictionary {
 
         DictionaryProxy DICTIONARY_PROXY = new DictionaryProxy();
 
+        ChooseOption(PathOfFile, TRANSLATE, EDIT_DICTIONARY_FILE, DICTIONARY_PROXY);
+
+    }
+
+    public static void ChooseOption(String pathOfFile, TranslateWord TRANSLATE, editDictionaryFile EDIT_DICTIONARY_FILE, DictionaryProxy DICTIONARY_PROXY) throws IOException {
         int choice;
         do {
 
             System.out.println("Enter your choice");
-            System.out.println("1. Translate");
+            System.out.println("1. lookup");
             System.out.println("2. Add new word");
             System.out.println("3. Remove word in file");
             System.out.println("4. Edit word in File");
@@ -33,51 +37,21 @@ public class MainDictionary {
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    TRANSLATE.VietNameseLanguage(PathOfFile);
+                    TRANSLATE.VietNameseLanguage(pathOfFile);
                     break;
                 case 2:
-                    DICTIONARY_PROXY.addWordManagement(PathOfFile);
+                    DICTIONARY_PROXY.addWordManagement(pathOfFile);
                     break;
                 case 3:
-                    DICTIONARY_PROXY.removeManagement(PathOfFile);
+                    DICTIONARY_PROXY.removeManagement(pathOfFile);
                     break;
                 case 4:
-                    DICTIONARY_PROXY.editManagement(PathOfFile);
+                    DICTIONARY_PROXY.editManagement(pathOfFile);
                     break;
                 case 5:
-                    EDIT_DICTIONARY_FILE.save_File(PathOfFile);
+                    EDIT_DICTIONARY_FILE.save_File(pathOfFile);
                     break;
             }
         } while (choice != 0);
-//        int choice;
-//        do {
-//
-//            System.out.println("Enter your choice");
-//            System.out.println("1. Translate");
-//            System.out.println("2. Add new word");
-//            System.out.println("3. Remove word in file");
-//            System.out.println("4. Edit word in File");
-//            System.out.println("5. Save file");
-//            System.out.println("0. Exit!");
-//
-//            choice = scanner.nextInt();
-//            switch (choice) {
-//                case 1:
-//                    TRANSLATE.VietNameseLanguage(PathOfFile);
-//                    break;
-//                case 2:
-//                    EDIT_DICTIONARY_FILE.addNew_Word(PathOfFile);
-//                    break;
-//                case 3:
-//                    EDIT_DICTIONARY_FILE.removeElement(PathOfFile);
-//                    break;
-//                case 4:
-//                    EDIT_DICTIONARY_FILE.editElement(PathOfFile);
-//                    break;
-//                case 5:
-//                    EDIT_DICTIONARY_FILE.save_File(PathOfFile);
-//                    break;
-//            }
-//        } while (choice != 0);
     }
 }
