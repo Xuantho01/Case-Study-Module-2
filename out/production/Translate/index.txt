@@ -1,0 +1,4 @@
+blue= xanh
+gray= xam
+pink=hhhhhhhhhhhh
+red= do

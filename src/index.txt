@@ -1,4 +1,4 @@
-blue= xanh
-gray= xam
 pink=hhhhhhhhhhhh
-red= do
+gray= xam
+blue=kkkkkkkkkkkkk
+yellow= vang
