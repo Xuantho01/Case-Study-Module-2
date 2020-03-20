@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eef87183-5841-4f61-90f9-a41e507ac7ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Translate/Execute/ReadFileDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/Execute/ReadFileDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Translate/Execute/TranslateWord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/Execute/TranslateWord.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Translate/client/editDictionaryFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/client/editDictionaryFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Translate/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Translate/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Execute/ReadFileDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/ReadFileDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Execute/TranslateWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Execute/TranslateWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/DictionaryProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/DictionaryProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/editDictionaryFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/editDictionaryFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.txt" afterDir="false" />
-    </list>
+    <list default="true" id="eef87183-5841-4f61-90f9-a41e507ac7ca" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +102,7 @@
       <workItem from="1584495690144" duration="32618000" />
       <workItem from="1584547973986" duration="2048000" />
       <workItem from="1584583699653" duration="20468000" />
-      <workItem from="1584669687646" duration="8729000" />
+      <workItem from="1584669687646" duration="9063000" />
     </task>
     <servers />
   </component>
