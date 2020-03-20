@@ -1,4 +1,5 @@
-red=đỏ
-blue=xanh
+blue=XANH
 gray=xám
+mom=mẹ
 pink=hồng
+red=đỏ

@@ -1,7 +1,5 @@
 package client;
-
 import Execute.TranslateWord;
-
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -42,7 +40,7 @@ public class MainDictionary {
             scanner.nextLine();
             switch (choice) {
                 case 1:
-                    TRANSLATE.VietNameseLanguage(pathOfFile);
+                    TRANSLATE.DisplayMeanOfWord();
                     break;
                 case 2:
                     DICTIONARY_PROXY.addWordManagement(pathOfFile);
