@@ -34,7 +34,12 @@ public class MainDictionary {
             System.out.println("5. Save file");
             System.out.println("0. Exit!");
 
-            choice = scanner.nextInt();
+            try {
+                choice = scanner.nextInt();
+            } catch (Exception e) {
+                choice = 10;
+            }
+            scanner.nextLine();
             switch (choice) {
                 case 1:
                     TRANSLATE.VietNameseLanguage(pathOfFile);
@@ -50,6 +55,11 @@ public class MainDictionary {
                     break;
                 case 5:
                     EDIT_DICTIONARY_FILE.save_File(pathOfFile);
+                    break;
+                case 0:
+                    break;
+                default:
+                    System.out.println("Wrong Option. Please try again!");
                     break;
             }
         } while (choice != 0);

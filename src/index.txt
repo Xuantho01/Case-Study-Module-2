@@ -1,7 +1,5 @@
-red= đỏ
+red=đỏ
+pink=hồng
 gray=xám
-car= ô tô
-mom= mẹ
-brother= anh
-sister= chị
-moto=xe máy
+blue=xanh
+mom=mẹ

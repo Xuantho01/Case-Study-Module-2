@@ -14,33 +14,27 @@ public class editDictionaryFile extends ReadFileDictionary implements IEditFileD
 
     WriteFile WRITE_FILE = new WriteFile();
 
-    public editDictionaryFile() {
-    }
+    public editDictionaryFile() {}
 
     @Override
     public void addNew_Word(String PathOfFile) {
         try {
 
-//            System.out.println("Enter new word: ");
-//            String WordToWrite = scanner.nextLine();
-
             System.out.println("Enter new word: ");
             String key = scanner.nextLine();
             System.out.println("Enter new meaning: ");
             String value = scanner.nextLine();
-
+            if (key.isEmpty() || value.isEmpty()){
+               throw new Exception("input is empty. Please try again!");
+            }
             wordList.put(key, value);
-
-//            FileWriter myWriteFile = new FileWriter(PathOfFile, true);
-//            BufferedWriter outToWrite = new BufferedWriter(myWriteFile);
-//            outToWrite.write("\n"+WordToWrite);
-//            System.out.println("Successfully wrote to the file!");
-//            outToWrite.close();
-
+            System.out.println("Successfully added!");
             WRITE_FILE.writeToFile(PathOfFile,wordList);
 
         } catch (IOException e) {
             System.out.println("An error occurred");
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println(wordList);
@@ -99,7 +93,9 @@ public class editDictionaryFile extends ReadFileDictionary implements IEditFileD
             TreeMap<String, String> sortFile = new TreeMap<>(wordList);
 
             Set<Map.Entry<String, String>> entries = sortFile.entrySet();
+
             System.out.println(entries);
+
             WriteFile.bufferWrite(file, entries);
 
         }catch (Exception e){
