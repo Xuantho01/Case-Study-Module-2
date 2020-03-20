@@ -21,20 +21,29 @@ public class editDictionaryFile extends ReadFileDictionary implements IEditFileD
     public void addNew_Word(String PathOfFile) {
         try {
 
+//            System.out.println("Enter new word: ");
+//            String WordToWrite = scanner.nextLine();
+
             System.out.println("Enter new word: ");
-            String WordToWrite = scanner.nextLine();
+            String key = scanner.nextLine();
+            System.out.println("Enter new meaning: ");
+            String value = scanner.nextLine();
 
-            FileWriter myWriteFile = new FileWriter(PathOfFile, true);
-            BufferedWriter outToWrite = new BufferedWriter(myWriteFile);
+            wordList.put(key, value);
 
-            outToWrite.write(WordToWrite);
-            System.out.println("Successfully wrote to the file!");
-            outToWrite.close();
+//            FileWriter myWriteFile = new FileWriter(PathOfFile, true);
+//            BufferedWriter outToWrite = new BufferedWriter(myWriteFile);
+//            outToWrite.write("\n"+WordToWrite);
+//            System.out.println("Successfully wrote to the file!");
+//            outToWrite.close();
+
+            WRITE_FILE.writeToFile(PathOfFile,wordList);
 
         } catch (IOException e) {
             System.out.println("An error occurred");
             e.printStackTrace();
         }
+        System.out.println(wordList);
     }
 
     @Override
@@ -46,9 +55,11 @@ public class editDictionaryFile extends ReadFileDictionary implements IEditFileD
             System.out.println("Enter word to remove");
             String WordToRemove = scanner.nextLine();
 
-            this.wordList.remove(WordToRemove);
+            ReadFileDictionary.wordList.remove(WordToRemove);
 
-            WRITE_FILE.writeToFile(PathOfFile,this.wordList);
+            WRITE_FILE.writeToFile(PathOfFile,wordList);
+
+            System.out.println(wordList);
             System.out.println("Successfully removed!");
 
         }catch (Exception e){
@@ -68,9 +79,9 @@ public class editDictionaryFile extends ReadFileDictionary implements IEditFileD
 
             readFromDictionaryFile(PathOfFile);
 
-            this.wordList.replace(KeyInWordList, ValueInWordList);
-
-            WRITE_FILE.writeToFile(PathOfFile, this.wordList);
+            wordList.replace(KeyInWordList, ValueInWordList);
+            System.out.println(wordList);
+            WRITE_FILE.writeToFile(PathOfFile, wordList);
 
         } catch (Exception e) {
             System.out.println(e);
@@ -88,7 +99,7 @@ public class editDictionaryFile extends ReadFileDictionary implements IEditFileD
             TreeMap<String, String> sortFile = new TreeMap<>(wordList);
 
             Set<Map.Entry<String, String>> entries = sortFile.entrySet();
-
+            System.out.println(entries);
             WriteFile.bufferWrite(file, entries);
 
         }catch (Exception e){

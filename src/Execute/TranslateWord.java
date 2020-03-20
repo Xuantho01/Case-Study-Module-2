@@ -3,8 +3,6 @@ package Execute;
 import java.io.IOException;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class TranslateWord extends ReadFileDictionary implements ITranslate {
 
@@ -21,15 +19,14 @@ public class TranslateWord extends ReadFileDictionary implements ITranslate {
 
         readFromDictionaryFile(pathOfFile);
 
-        String regex = ".*" + New_Word+ ".*";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher;
+        String regex = ".*" + New_Word.toLowerCase()+ ".*";
+        System.out.println(wordList);
 
         for (Map.Entry<String, String> entry : wordList.entrySet()) {
-            matcher = pattern.matcher(entry.getKey());
-            if (matcher.find()) {
+            if (entry.getKey().matches(regex)) {
                 System.out.println(entry.getKey() + " : " + entry.getValue());
             }
         }
+
     }
 }

@@ -1,5 +1,5 @@
 package Execute;
-
+import client.editDictionaryFile;
 import java.io.*;
 import java.util.*;
 
@@ -8,7 +8,7 @@ public class ReadFileDictionary implements IRead_File {
 
     public ReadFileDictionary() {}
 
-    public Map<String, String> wordList = new HashMap<>();
+    public static Map<String, String> wordList = new HashMap<>();
 
     @Override
     public void readFromDictionaryFile(String pathOfFile) throws IOException {
@@ -28,5 +28,6 @@ public class ReadFileDictionary implements IRead_File {
         }catch (Exception e){
             System.out.println(e);
         }
+        System.out.println(wordList);
     }
 }

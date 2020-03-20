@@ -50,7 +50,7 @@ public class DictionaryProxy extends editDictionaryFile implements Proxy, IReadA
 //        }
 //        return false;
 //    }
-
+//
     @Override
     public void editManagement(String PathOfFile) {
 
